@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        form{
+            width: 600px;
+            height: 500px;
+            background-color: bisque;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-around;
+
+        }
+        input{
+            width: 400px;
+            height: 50px;
+        }
+        button{
+            width: 400px;
+            height: 50px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <label><input type="text" name = 'brand'> Brand:</label>
+        <label><input type="number" name = 'year'> Year:</label>
+        <label><input type="text" name = 'color'> Color:</label>
+        <label><input type="number" name = 'mileage'> Mileage:</label>
+        <label><input type="number" name = 'cost'> Cost:</label>
+        <button type="submit">Save</button>
+
+    </form>
+</body>
+</html>
